@@ -1,0 +1,132 @@
+.skillsSection {
+	color: white;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 50px;
+	background-color: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(3px);
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.title {
+	color: #ffffff;
+	font-size: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	border-bottom: 3px solid #8405fa;
+	display: inline-block;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.controls button {
+	background: transparent;
+	color: #ffffff;
+	border: 1px solid #8405fa;
+
+	width: 40px;
+	height: 40px;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: background 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+	background: #8405fa;
+}
+
+.scrollContainer {
+	display: flex;
+	gap: 1rem;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE/Edge */
+}
+
+.scrollContainer::-webkit-scrollbar {
+	display: none; /* Chrome */
+}
+
+.card {
+	min-width: 200px;
+	flex-shrink: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+	color: #8405fa;
+	margin-bottom: 0.5rem;
+	background-color: rgb(0, 0, 0);
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+.card ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.card li {
+	color: #ffffff;
+	margin-bottom: 0.3rem;
+	padding-left: 10px;
+}
+
+
+/* ========================= */
+/* ✅ Адаптивная часть ниже: */
+/* ========================= */
+
+@media (max-width: 1024px) {
+	.title {
+		font-size: 18px;
+		margin-left: 16px;
+	}
+
+	.card {
+		min-width: 180px;
+	}
+}
+
+@media (max-width: 768px) {
+	.controls {
+		gap: 0.5rem;
+	}
+
+	.controls button {
+		width: 36px;
+		height: 36px;
+		font-size: 1rem;
+	}
+
+	.card {
+		min-width: 160px;
+	}
+}
+
+@media (max-width: 480px) {
+	.title {
+		font-size: 16px;
+		margin-left: 12px;
+	}
+
+	.card {
+		min-width: 140px;
+	}
+
+	.card h3 {
+		font-size: 16px;
+	}
+
+	.card li {
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,166 @@
+.container {
+	background-image: url('../assets/BackGround.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 80vh;
+	color: #ffffff;
+	padding: 60px 20px;
+	padding-top: 100px;
+}
+
+.localContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.left {
+  flex: 1;
+  min-width: 280px;
+  max-width: 540px;
+}
+.left h1 {
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 10px;
+	font-size: 60px;
+	line-height: 1;
+	font-weight: bold;
+	backdrop-filter: blur(10px);
+	background-color: rgba(0, 0, 0, 0.6)
+	
+}
+
+.purple {
+	color: rgb(132, 5, 250);
+
+}
+
+.description {
+	border-radius: 10px;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #000000;
+	font-size: 30px;
+	backdrop-filter: blur(10px);
+	background-color: rgba(132, 5, 250, 0.6)
+}
+
+.right {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mainImage {
+	width: 300px;
+	height: auto;
+	object-fit: contain;
+	border-radius: 200px;
+}
+
+.status {
+
+	width: 299px;
+	margin-top: 0px;
+	background-color: rgb(0, 0, 0);
+	color: #ffffff;
+	border: 1px solid #000000;
+	padding: 8px 0px 8px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	font-size: 12px;
+  border-radius: 10px;
+}
+
+.status img {
+	width: 12px;
+	height: 12px;
+	background-color: #8405fa;
+}
+
+.descriptionUnderImg {
+	padding-right: 0px;
+
+}
+
+
+/* ===================== */
+/* ✅ Адаптивность ниже: */
+/* ===================== */
+
+@media (max-width: 1024px) {
+  .left h1 {
+    font-size: 42px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .mainImage {
+    width: 240px;
+  }
+
+  .status {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .localContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left h1 {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .mainImage {
+    width: 200px;
+  }
+
+  .status {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .localContainer {
+padding-left: 0px;
+  }
+  .left h1 {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .mainImage {
+    width: 160px;
+  }
+
+  .status {
+    font-size: 9px;
+  }
+}

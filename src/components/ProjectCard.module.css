@@ -1,0 +1,186 @@
+.card {
+	background: rgba(20, 5, 40, 0.6);
+	border: 1px solid rgba(132, 5, 250, 0.3);
+	border-radius: 16px;
+	width: 300px;
+	min-height: 380px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	padding: 0;
+	box-shadow:
+		0 0 20px rgba(132, 5, 250, 0.08),
+		inset 0 1px 0 rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	transition:
+		transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+		box-shadow 0.3s ease,
+		border-color 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-6px);
+	box-shadow:
+		0 0 40px rgba(132, 5, 250, 0.35),
+		0 0 80px rgba(132, 5, 250, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	border-color: rgba(132, 5, 250, 0.7);
+}
+
+/* SVG превью */
+.preview {
+	width: 100%;
+	height: 160px;
+	overflow: hidden;
+	flex-shrink: 0;
+	display: block;
+	position: relative;
+}
+
+.preview svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+	transition: transform 0.4s ease;
+}
+
+.card:hover .preview svg {
+	transform: scale(1.04);
+}
+
+/* Градиентный фейд снизу иллюстрации */
+.preview::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	background: linear-gradient(to bottom, transparent, rgba(20, 5, 40, 0.8));
+	pointer-events: none;
+}
+
+/* Контент */
+.stack {
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #b06fff;
+	margin: 14px 16px 0;
+}
+
+.projectTitle {
+	font-size: 20px;
+	font-weight: 800;
+	color: #ffffff;
+	margin: 8px 16px 6px;
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+}
+
+.description {
+	font-size: 14px;
+	color: #a78bbe;
+	margin: 0 16px;
+	line-height: 1.6;
+	flex-grow: 1;
+}
+
+.links {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	padding: 14px 16px 18px;
+}
+
+.linkBtn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 0.4rem 1.1rem;
+	background: transparent;
+	color: #8405fa;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	border-radius: 8px;
+	border: 1px solid #8405fa;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease,
+		box-shadow 0.2s ease,
+		transform 0.15s ease;
+}
+
+.linkBtn:hover {
+	background: #8405fa;
+	color: #ffffff;
+	box-shadow: 0 0 16px rgba(132, 5, 250, 0.5);
+	transform: translateY(-1px);
+}
+
+.linkBtn:active {
+	transform: scale(0.97);
+}
+
+/* ======================== */
+/* 📱 Адаптивность          */
+/* ======================== */
+
+/* Планшет: карточка растягивается на всю ширину */
+@media (max-width: 768px) {
+	.card {
+		width: 100%;
+		min-height: unset;
+	}
+
+	.preview {
+		height: 180px;
+	}
+
+	.projectTitle {
+		font-size: 18px;
+	}
+}
+
+/* Мобильный: чуть компактнее */
+@media (max-width: 480px) {
+	.card {
+		border-radius: 12px;
+	}
+
+	.preview {
+		height: 150px;
+	}
+
+	.stack {
+		font-size: 10px;
+		margin: 12px 14px 0;
+	}
+
+	.projectTitle {
+		font-size: 16px;
+		margin: 6px 14px 4px;
+	}
+
+	.description {
+		font-size: 13px;
+		margin: 0 14px;
+	}
+
+	.links {
+		padding: 12px 14px 16px;
+	}
+
+	.linkBtn {
+		font-size: 13px;
+		padding: 0.35rem 0.9rem;
+	}
+
+	/* убираем hover-анимацию подъёма на тач-устройствах */
+	.card:hover {
+		transform: none;
+	}
+}

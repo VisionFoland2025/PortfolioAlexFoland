@@ -1,0 +1,158 @@
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(5px);
+	color: #ffffff;
+	height: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+	backdrop-filter: blur(5px);
+	box-sizing: border-box;
+}
+
+.rightSection {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: nowrap;
+}
+
+.navList {
+	display: flex;
+	list-style: none;
+	gap: 20px;
+	padding: 0;
+	margin: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: unset;
+}
+
+.logoIcon {
+	color: #8405fa;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.logoText {
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.navBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.rightSection {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: nowrap;
+}
+
+.navList {
+	display: flex;
+	list-style: none;
+	gap: 20px;
+	padding: 0;
+	margin: 0;
+}
+
+.navItem {
+	display: flex;
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 24px;
+	transition: color 0.7s;
+}
+
+.navItem a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.navItem:hover {
+	color: #8405fa;
+
+	border: 1px solid;
+}
+
+.navItem a:hover {
+  color: #8405fa;
+}
+
+.textColor {
+	color: #8405fa;
+}
+.languageSwitcher {
+	color: #ffffff;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+	.navItem {
+		font-size: 20px;
+	}
+	.logoText {
+		font-size: 20px;
+	}
+	.languageSwitcher {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		align-items: flex-start;
+		height: auto;
+		padding: 10px 16px;
+	}
+
+	.navBar {
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		gap: 10px;
+	}
+
+	.rightSection {
+		flex-direction: column;
+		align-items: flex-start;
+		width: 100%;
+		gap: 12px;
+	}
+
+	.navList {
+		flex-direction: column;
+		width: 100%;
+		gap: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.navItem {
+		font-size: 18px;
+	}
+	.logoText {
+		font-size: 18px;
+	}
+	.languageSwitcher {
+		font-size: 18px;
+	}
+}
