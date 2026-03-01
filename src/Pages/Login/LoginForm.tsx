@@ -12,7 +12,7 @@ export const LoginForm = ({
 }: {
   onLogin: (email: string) => void;
 }) => {
-  const [isEmailMode, setIsEmailMode] = useState(true);
+  const [isEmailMode] = useState(true);
   const [isRegistering, setIsRegistering] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
