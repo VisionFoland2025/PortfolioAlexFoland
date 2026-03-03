@@ -8,6 +8,37 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+/* 1. ПРИНУДИТЕЛЬНЫЙ КУРЬЕР ДЛЯ ВСЕХ СОСТОЯНИЙ */
+input, 
+textarea, 
+.input,
+.input:focus,
+.input:active,
+.input:hover {
+  font-family: "Courier New", Courier, monospace !important;
+  font-weight: 400 !important;
+}
+
+/* 2. ФИКС ПЛЕЙСХОЛДЕРА (чтобы не прыгал при клике) */
+.input::-webkit-input-placeholder { font-family: "Courier New", Courier, monospace !important; }
+.input::-moz-placeholder          { font-family: "Courier New", Courier, monospace !important; }
+.input:-ms-input-placeholder      { font-family: "Courier New", Courier, monospace !important; }
+.input::placeholder               { font-family: "Courier New", Courier, monospace !important; }
+
+/* 3. УЛЬТИМАТИВНЫЙ ФИКС АВТОЗАПОЛНЕНИЯ (Самая частая причина) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-internal-autofill-selected {
+  -webkit-text-fill-color: #8405fa !important;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  /* Важно: повторяем шрифт здесь */
+  font-family: "Courier New", Courier, monospace !important;
+}
+
+/* 4. ГЛОБАЛЬНЫЕ СТИЛИ СТРАНИЦЫ */
 html,
 body,
 #root {
@@ -18,17 +49,13 @@ body,
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-	width: 10px;
-}
-::-webkit-scrollbar-track {
-	background-color: #000000;
-}
+/* 5. СКРОЛЛБАР */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background-color: #000000; }
 ::-webkit-scrollbar-thumb {
 	background-color: #8405fa;
 	border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
 	background-color: var(--scroll-thumb-hover, #8405fa);
 }

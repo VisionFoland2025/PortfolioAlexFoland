@@ -73,8 +73,8 @@
 }
 
 .feedbackItem {
-    height: 180px; /* Фиксированная высота для ровной сетки */
-    display: flex;
+    min-height: 180px; /* Фиксированная высота для ровной сетки */
+    display: auto;
     flex-direction: column;
     padding: 20px;
     border-radius: 15px;
