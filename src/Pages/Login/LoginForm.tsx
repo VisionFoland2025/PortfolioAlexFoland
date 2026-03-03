@@ -4,7 +4,7 @@ import {
   signInWithPopup,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
-import { auth, googleProvider } from "./firebase";
+import { auth, googleProvider } from "../../firebase";
 import styles from "./LoginForm.module.css";
 
 export const LoginForm = ({

@@ -25,10 +25,10 @@ const skillsData = [
   },
   {
     title: "Tools",
-    items: ["VSCode", "Figma", "Git", "Firebase"],
+    items: ["VSCode", "Intellij IDEA", "Figma", "Firebase", "Git"],
   },
 
-  { title: "Other", items: ["HTML", "CSS", "SCSS", "Vite"] },
+  { title: "Other", items: ["HTML", "CSS", "SCSS", "TailwindCSS", "Vite"] },
 ];
 
 export const Skills = () => {

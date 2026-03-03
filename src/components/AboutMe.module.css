@@ -96,7 +96,7 @@
   margin-bottom: 0.8rem;
 }
 .paragraph {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   background-color: #000000;
   line-height: 1.75;
@@ -121,6 +121,7 @@
   border-radius: 4px;
   background: rgba(132, 5, 250, 0.08);
   transition: all 0.2s ease;
+  user-select: none; 
 }
 .tag:hover {
   background: rgba(132, 5, 250, 0.2);
@@ -134,11 +135,11 @@
   align-items: center;
   gap: 8px;
   background: none;
-  border: 1px solid rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(0, 0, 0, 0.6);
   color: #000000;
   padding: 10px 22px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px bold;
   border-radius: 6px;
   transition: all 0.25s ease;
   letter-spacing: 0.03em;

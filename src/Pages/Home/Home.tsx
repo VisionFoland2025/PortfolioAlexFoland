@@ -1,6 +1,7 @@
 import { AboutMe } from "../../components/AboutMe";
 import { AppBar } from "../../components/AppBar";
 import { Contacts } from "../../components/Contacts";
+import { FeedBack } from "../../components/FeedBack";
 import { HeroSection } from "../../components/HeroSection";
 import { Projects } from "../../components/Projects";
 import { Quote } from "../../components/Quote";
@@ -27,6 +28,9 @@ export const Home = () => {
         </section>
         <section id='contacts'>
           <Contacts />
+        </section>
+        <section id='feedback'>
+          <FeedBack />
         </section>
       </div>
     </>

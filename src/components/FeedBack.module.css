@@ -1,0 +1,159 @@
+.container {
+    padding: 80px 20px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh; /* Чтобы футер не прыгал при переключении страниц */
+}
+
+/* --- Заголовок и форма (без изменений) --- */
+.title {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #8405fa;
+    display: inline-block;
+}
+
+.hash { color: #8405fa; margin-right: 0.3rem; }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.textarea {
+    width: 100%;
+    max-width: 600px;
+    min-height: 120px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(132, 5, 250, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.textarea:focus {
+    border-color: #8405fa;
+    box-shadow: 0 0 15px rgba(132, 5, 250, 0.2);
+}
+
+.submitBtn {
+    width: 100%;
+    max-width: 600px;
+    padding: 14px;
+    background: #8405fa;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitBtn:hover:not(:disabled) {
+    background: #9d30ff;
+    box-shadow: 0 5px 20px rgba(132, 5, 250, 0.4);
+    transform: translateY(-2px);
+}
+
+/* --- СЕТКА ФИДБЕКОВ --- */
+.card {
+    display: grid;
+    /* Создаем сетку: минимум 320px, максимум 3 колонки */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.feedbackItem {
+    height: 180px; /* Фиксированная высота для ровной сетки */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    
+    /* Твой стиль: черный полупрозрачный и фиолетовый текст */
+    background: rgba(0, 0, 0, 0.8);
+    color: #b066ff;
+    border: 1px solid rgba(132, 5, 250, 0.2);
+    
+    font-size: 15px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.feedbackItem:hover {
+    border-color: #8405fa;
+    background: rgba(10, 0, 20, 0.95);
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Контейнер для текста внутри (чтобы работал скролл) */
+.feedbackText {
+    overflow-y: auto;
+    word-break: break-word;
+    padding-right: 10px;
+}
+
+.feedbackText::-webkit-scrollbar { width: 4px; }
+.feedbackText::-webkit-scrollbar-thumb {
+    background: rgba(132, 5, 250, 0.3);
+    border-radius: 10px;
+}
+
+/* --- ПАГИНАЦИЯ --- */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto; /* Прижимает к низу контейнера */
+}
+
+.pageBtn {
+    min-width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(132, 5, 250, 0.3);
+    color: #b066ff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.pageBtn:hover:not(:disabled) {
+    background: rgba(132, 5, 250, 0.2);
+    border-color: #8405fa;
+}
+
+.activePage {
+    background: #8405fa !important;
+    color: white !important;
+    border-color: #8405fa;
+    box-shadow: 0 0 15px rgba(132, 5, 250, 0.4);
+}
+
+.pageBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* --- Адаптив --- */
+@media (max-width: 1100px) {
+    .card { grid-template-columns: repeat(auto-fill, minmax(45%, 1fr)); }
+}
+
+@media (max-width: 768px) {
+    .container { padding-top: 60px; }
+    .card { grid-template-columns: 1fr; }
+    .feedbackItem { height: auto; max-height: 200px; }
+}

@@ -738,7 +738,7 @@ const illustrations: Record<Props["illustration"], React.JSX.Element> = {
         fillOpacity='0.15'
       />
 
-      {/* Кусок (сдвинут на +22, -18) */}
+      {/* Кусок */}
       <path
         d={`M${150 + 22} ${88 - 18}
           L${150 + 22 + 68 * Math.cos((330 * Math.PI) / 180)} ${88 - 18 + 68 * Math.sin((330 * Math.PI) / 180)}

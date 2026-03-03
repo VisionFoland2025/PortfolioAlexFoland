@@ -1,36 +1,57 @@
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import styles from "./AppBar.module.css";
 
 export const AppBar = () => {
   return (
     <header className={styles.container}>
-      <Link to='/' className={styles.logo}>
+      {/* Логотип ведет на главную через роутер */}
+      <RouterLink to='/' className={styles.logo}>
         <span className={styles.logoIcon}>ALEX</span>
         <span className={styles.logoText}>FOLAND</span>
-      </Link>
+      </RouterLink>
 
-      {/* Оборачиваем меню и язык в отдельный блок */}
       <div className={styles.rightSection}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <a className={styles.textColor} href='#home'>
-              #<p>home</p>
-            </a>
+            <ScrollLink
+              to='home'
+              smooth={true}
+              duration={500}
+              className={styles.scrollLink}
+            >
+              <span className={styles.textColor}>#</span>home
+            </ScrollLink>
           </li>
           <li className={styles.navItem}>
-            <a className={styles.textColor} href='#works'>
-              #<p>works</p>
-            </a>
+            <ScrollLink
+              to='works'
+              smooth={true}
+              duration={500}
+              className={styles.scrollLink}
+            >
+              <span className={styles.textColor}>#</span>works
+            </ScrollLink>
           </li>
           <li className={styles.navItem}>
-            <a className={styles.textColor} href='#about-me'>
-              #<p>about-me</p>
-            </a>
+            <ScrollLink
+              to='about-me'
+              smooth={true}
+              duration={500}
+              className={styles.scrollLink}
+            >
+              <span className={styles.textColor}>#</span>about-me
+            </ScrollLink>
           </li>
           <li className={styles.navItem}>
-            <a className={styles.textColor} href='#contacts'>
-              #<p>contacts</p>
-            </a>
+            <ScrollLink
+              to='contacts'
+              smooth={true}
+              duration={500}
+              className={styles.scrollLink}
+            >
+              <span className={styles.textColor}>#</span>contacts
+            </ScrollLink>
           </li>
         </ul>
         <div className={styles.languageSwitcher}>EN</div>
